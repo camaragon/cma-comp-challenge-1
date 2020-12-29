@@ -1,0 +1,72 @@
+* {
+    border: 1px solid red;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 20% 1fr;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+button {
+    height: 20%;
+    width: 10%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    order: 1;
+}
+
+.tools {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.widget-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    justify-content: ;
+}
+
+.widget {
+    display: grid;
+    grid-template-rows: 35% 65%;
+    height: 120%;
+}
+
+.widget-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5px;
+    overflow: hidden;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(https://usefulangle.com/img/thumb/javascript.png);
+    background-position: center;
+    background-size: cover;
+}
+
+

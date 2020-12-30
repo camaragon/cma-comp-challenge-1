@@ -41,6 +41,7 @@ h1 {
 
 h2 {
     color: white;
+    font-size: 40px;
     margin-left: 20px;
 }
 .tool-button {
@@ -103,10 +104,9 @@ h2 {
 
 .widget {
     display: grid;
-    grid-template-rows: .3fr .7fr;
+    grid-template-rows: .5fr 1fr;
     border: 1px solid gray;
     background-color:  #F8F8F8;
-    /* height: 120%; */
 }
 
 .widget-text {
@@ -116,6 +116,7 @@ h2 {
     justify-content: space-between;
     padding: 10px;
     overflow: hidden;
+    border-top: 1px solid black;
 }
 
 .stack * {
@@ -129,13 +130,70 @@ h2 {
     margin: 10px;
 }
 
-.image {
+.js-image {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     background-image: url(https://usefulangle.com/img/thumb/javascript.png);
     background-position: center;
-    background-size: cover;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #F0DB4F;
+}
+
+.ruby-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/ruby.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #FBD3A2;
+}
+
+.python-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #F8F8F8;
+}
+
+.node-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/node.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #8BC503;
+}
+
+.java-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/java.png);
+    background-position: center;
+    background-size: 30% 100%;
+    background-repeat: no-repeat;
+    background-color: #F8F8F8;
+}
+
+.php-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/php.svg);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-color: #777BB3;
 }
 
 .text *{

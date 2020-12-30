@@ -1,21 +1,54 @@
 * {
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    font-family: 'Jura', sans-serif;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    /* background-color: gray; */
 }
 
 body {
     display: grid;
-    grid-template-rows: 20% 1fr;
+    grid-template-rows: .2r 1fr;
+    margin: 0;
 }
 
 header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
+    background-color: #F8F8F8;
 }
 
-button {
-    height: 20%;
-    width: 10%;
+main {
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 70%);
+}
+
+h1 {
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+    font-size: 70px;
+    background-color: rgb(255,0,0);
+    background-image: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+h2 {
+    color: white;
+    margin-left: 20px;
+}
+.tool-button {
+    font-size: 20px;
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .title {
@@ -24,49 +57,141 @@ button {
     align-items: flex-end;
     justify-content: space-between;
     order: 1;
+    padding-right: 5%;
 }
 
-.tools {
+.tool-bar {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+.tool-images,
+.admin-image {
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.tools,
+.admin {
+    display: flex;
+    align-items: center;
+}
+
+.admin-button {
+    height: 20px;
+    width: 20px;
+    background: url(assets/down_arrow.svg);
+    background-color: transparent;
+    border: none;
+}
+
+.admin-name {
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .widget-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 20px;
-    justify-content: ;
+    grid-gap: 10px;
+    padding: 20px;
 }
 
 .widget {
     display: grid;
-    grid-template-rows: 35% 65%;
-    height: 120%;
+    grid-template-rows: .3fr .7fr;
+    border: 1px solid gray;
+    background-color:  #F8F8F8;
+    /* height: 120%; */
 }
 
 .widget-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 5px;
+    justify-content: space-between;
+    padding: 10px;
     overflow: hidden;
+}
+
+.stack * {
+    margin: 0 !important;
 }
 
 .stack {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 10px;
 }
 
 .image {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     background-image: url(https://usefulangle.com/img/thumb/javascript.png);
     background-position: center;
     background-size: cover;
 }
 
+.text *{
+    margin: 0 !important;
+}
 
+.text {
+    margin: 5px;
+}
+
+.url {
+    display: flex;
+    align-items: center;
+    height: 25%;
+    width: 75%;
+    padding: 15px;
+    margin: 5px;
+    word-break: break-all;
+    hyphens: auto;
+    background-color: lightgray;
+}
+
+.date {
+    font-size: small;
+    color: gray;
+}
+
+.playlist{
+    font-size: small;
+}
+
+.attach {
+    font-size: small;
+}
+
+.attach-num {
+    font-size: 30px;
+    color: #31B9FD;
+}
+
+.arrow {
+    height: 50px;
+    width: 50px;
+    background: url(https://www.flaticon.com/svg/static/icons/svg/1059/1059157.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-color: #EFEFEF;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.views {
+    font-size: small;
+}
+
+.views-num {
+    font-size: 30px;s
+}

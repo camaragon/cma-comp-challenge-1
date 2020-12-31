@@ -1,23 +1,16 @@
 * {
-    /* border: 1px solid red; */
     font-family: 'Jura', sans-serif;
-}
-
-html {
-    height: 100%;
-    width: 100%;
-    /* background-color: gray; */
 }
 
 body {
     display: grid;
-    grid-template-rows: .2r 1fr;
+    grid-template-rows: .2fr 1fr;
     margin: 0;
 }
 
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr .8fr;
     background-color: #F8F8F8;
 }
 
@@ -28,7 +21,7 @@ main {
 
 h1 {
     font-family: 'Libre Barcode 39 Extended Text', cursive;
-    font-size: 70px;
+    font-size: 80px;
     background-color: rgb(255,0,0);
     background-image: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 100%);
     -webkit-background-clip: text;
@@ -43,13 +36,16 @@ h2 {
     color: white;
     font-size: 40px;
     margin-left: 20px;
+    text-shadow: 2px 2px 5px red;
 }
+
 .tool-button {
     font-size: 20px;
     white-space: nowrap;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    text-shadow: 1px 1px 1px red;
 }
 
 .title {
@@ -59,6 +55,7 @@ h2 {
     justify-content: space-between;
     order: 1;
     padding-right: 5%;
+    margin-left: 5%;
 }
 
 .tool-bar {
@@ -92,12 +89,12 @@ h2 {
 .admin-name {
     margin-left: 5px;
     margin-right: 5px;
+    text-shadow: 1px 1px 1px red;
 }
 
 .widget-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     padding: 20px;
 }
@@ -105,8 +102,9 @@ h2 {
 .widget {
     display: grid;
     grid-template-rows: .5fr 1fr;
-    border: 1px solid gray;
-    background-color:  #F8F8F8;
+    border: 3px solid white;
+    border-style: ridge;
+    background-color: black; 
 }
 
 .widget-text {
@@ -116,7 +114,6 @@ h2 {
     justify-content: space-between;
     padding: 10px;
     overflow: hidden;
-    border-top: 1px solid black;
 }
 
 .stack * {
@@ -213,12 +210,14 @@ h2 {
     margin: 5px;
     word-break: break-all;
     hyphens: auto;
-    background-color: lightgray;
+    background-color: #F8F8F8;
+    text-shadow: 1px 1px 1px red;
 }
 
 .date {
     font-size: small;
-    color: gray;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px red;
 }
 
 .playlist{
@@ -231,12 +230,11 @@ h2 {
 
 .attach-num {
     font-size: 30px;
-    color: #31B9FD;
 }
 
 .arrow {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     background: url(https://www.flaticon.com/svg/static/icons/svg/1059/1059157.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -248,8 +246,75 @@ h2 {
 
 .views {
     font-size: small;
+    text-shadow: 1px 1px 1px red;
 }
 
 .views-num {
-    font-size: 30px;s
+    font-size: 30px;
+    text-shadow: 1px 1px 1px red;
+}
+
+.w-text {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px red;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        display: grid;
+        grid-template-rows: 275px 1fr;
+        margin: 0;
+    }
+
+    .widget-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 15px;
+        padding: 20px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        order: 0;
+    }
+
+    .tool-bar {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+    
+@media screen and (max-width: 550px) {
+    .widget-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 15px;
+        padding: 20px;
+    }
+    
+    .tool-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }

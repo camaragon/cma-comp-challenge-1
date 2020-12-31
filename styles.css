@@ -30,6 +30,12 @@ h1 {
     -moz-text-fill-color: transparent;
     margin-bottom: 25px;
     margin-top: 25px;
+    transition-duration: 500ms;
+}
+
+h1:hover {
+    transform: rotateY(180deg);
+    cursor: none;
 }
 
 h2 {
@@ -46,6 +52,10 @@ h2 {
     border: none;
     cursor: pointer;
     text-shadow: 1px 1px 1px red;
+}
+
+.tool-button:hover {
+    color: red;
 }
 
 .title {
@@ -105,6 +115,11 @@ h2 {
     border: 3px solid white;
     border-style: ridge;
     background-color: black; 
+    transition: 300ms ease;
+}
+
+.widget:hover {
+    transform: scale(0.95);
 }
 
 .widget-text {

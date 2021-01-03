@@ -1,3 +1,4 @@
+/* ~~~~~ GLOBAL RULES ~~~~~ */
 * {
     font-family: 'Jura', sans-serif;
 }
@@ -44,6 +45,7 @@ h2 {
     text-shadow: 2px 2px 5px red;
 }
 
+/* ~~~~~ HEADER SECTION ~~~~~ */
 .tool-button {
     font-size: 20px;
     white-space: nowrap;
@@ -101,6 +103,7 @@ h2 {
     text-shadow: 1px 1px 1px red;
 }
 
+/* ~~~~~ WIDGET SECTION ~~~~~ */
 .widget-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -127,7 +130,6 @@ h2 {
     align-items: flex-start;
     justify-content: space-between;
     padding: 10px;
-    overflow: hidden;
 }
 
 .stack * {
@@ -234,10 +236,7 @@ h2 {
     text-shadow: 2px 2px 5px red;
 }
 
-.playlist{
-    font-size: small;
-}
-
+.playlist,
 .attach {
     font-size: small;
 }
@@ -273,6 +272,7 @@ h2 {
     text-shadow: 2px 2px 5px red;
 }
 
+/* ~~~~~ MEDIA QUERIES / RESPONSIVENESS ~~~~~ */
 @media screen and (max-width: 900px) {
     body {
         display: grid;

@@ -1,0 +1,333 @@
+/* ~~~~~ GLOBAL RULES ~~~~~ */
+* {
+    font-family: 'Jura', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-rows: .2fr 1fr;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr .8fr;
+    background-color: #F8F8F8;
+}
+
+main {
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 70%);
+}
+
+h1 {
+    font-family: 'Libre Barcode 39 Extended Text', cursive;
+    font-size: 80px;
+    background-color: rgb(255,0,0);
+    background-image: radial-gradient(circle, rgba(255,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    transition-duration: 500ms;
+}
+
+h1:hover {
+    transform: rotateY(180deg);
+    cursor: none;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+    margin-left: 20px;
+    text-shadow: 2px 2px 5px red;
+}
+
+/* ~~~~~ HEADER SECTION ~~~~~ */
+.tool-button {
+    font-size: 20px;
+    white-space: nowrap;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px red;
+}
+
+.tool-button:hover {
+    color: red;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    order: 1;
+    padding-right: 5%;
+    margin-left: 5%;
+}
+
+.tool-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+.tool-images,
+.admin-image {
+    max-height: 20px;
+    max-width: 20px;
+}
+
+.tools,
+.admin {
+    display: flex;
+    align-items: center;
+}
+
+.admin-button {
+    height: 20px;
+    width: 20px;
+    background: url(assets/down_arrow.svg);
+    background-color: transparent;
+    border: none;
+}
+
+.admin-name {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-shadow: 1px 1px 1px red;
+}
+
+/* ~~~~~ WIDGET SECTION ~~~~~ */
+.widget-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.widget {
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+    border: 3px solid white;
+    border-style: ridge;
+    background-color: black; 
+    transition: 300ms ease;
+}
+
+.widget:hover {
+    transform: scale(0.95);
+}
+
+.widget-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.stack * {
+    margin: 0 !important;
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.js-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/javascript.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #F0DB4F;
+}
+
+.ruby-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/ruby.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #FBD3A2;
+}
+
+.python-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #F8F8F8;
+}
+
+.node-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/node.png);
+    background-position: center;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-color: #8BC503;
+}
+
+.java-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/java.png);
+    background-position: center;
+    background-size: 30% 100%;
+    background-repeat: no-repeat;
+    background-color: #F8F8F8;
+}
+
+.php-image {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-image: url(assets/php.svg);
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-color: #777BB3;
+}
+
+.text *{
+    margin: 0 !important;
+}
+
+.text {
+    margin: 5px;
+}
+
+.url {
+    display: flex;
+    align-items: center;
+    height: 25%;
+    width: 75%;
+    padding: 15px;
+    margin: 5px;
+    word-break: break-all;
+    hyphens: auto;
+    background-color: #F8F8F8;
+    text-shadow: 1px 1px 1px red;
+}
+
+.date {
+    font-size: small;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px red;
+}
+
+.playlist,
+.attach {
+    font-size: small;
+}
+
+.attach-num {
+    font-size: 30px;
+}
+
+.arrow {
+    height: 60px;
+    width: 60px;
+    background: url(https://www.flaticon.com/svg/static/icons/svg/1059/1059157.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-color: #EFEFEF;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.views {
+    font-size: small;
+    text-shadow: 1px 1px 1px red;
+}
+
+.views-num {
+    font-size: 30px;
+    text-shadow: 1px 1px 1px red;
+}
+
+.w-text {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px red;
+}
+
+/* ~~~~~ MEDIA QUERIES / RESPONSIVENESS ~~~~~ */
+@media screen and (max-width: 900px) {
+    body {
+        display: grid;
+        grid-template-rows: 275px 1fr;
+    }
+
+    .widget-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-gap: 15px;
+        padding: 20px;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        order: 0;
+    }
+
+    .tool-bar {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+}
+    
+@media screen and (max-width: 550px) {
+    .widget-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 15px;
+        padding: 20px;
+    }
+    
+    .tool-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
